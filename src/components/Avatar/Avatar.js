@@ -4,7 +4,7 @@ import Img from 'gatsby-image'
 import {useStaticQuery, graphql} from 'gatsby'
 
 import {Heading, SubHeading} from '../Heading'
-/* globals tw */
+import tw from 'tailwind.macro'
 
 const Avatar = ({heading, subHeading}) => {
   const avatarSrc = useStaticQuery(graphql`
@@ -29,8 +29,8 @@ const Avatar = ({heading, subHeading}) => {
   )
 }
 
-const StyledAvatar = styled.div`${tw`flex flex-row`}`
-const AvatarHeadingContainer = styled.div`${tw`flex flex-col justify-center`}`
+const StyledAvatar = tw.div`flex flex-row`
+const AvatarHeadingContainer = tw.div`flex flex-col justify-center`
 const AvatarImg = styled(Img)`${tw`rounded-full w-16`}`
 const AvatarHeading = styled(Heading)`${tw`pl-4 m-0 font-semibold`}`
 const AvatarSubHeading = styled(SubHeading)`${tw`pl-4 mt-1 mb-0`}`

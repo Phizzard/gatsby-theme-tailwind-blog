@@ -6,7 +6,7 @@ import {Text} from '../components/Text'
 import {BioCard} from '../components/BioCard'
 import {Card} from '../components/Card'
 import {Tag} from '../components/Tag'
-/* global tw */
+import tw from 'tailwind.macro'
 import {Layout} from '../components/Layout'
 
 const Posts = ({pageContext}) => {
@@ -37,6 +37,6 @@ const PostsHeading = styled(Heading)`${tw`text-center`}`
 const PostCard = styled(Card)`${tw`mb-4`}`
 const PostCardTitle = styled(Heading)`${tw`mt-0 mb-2`}`
 const PostCardLink = styled(Link)`${tw`no-underline text-black`}`
-const Emoji = styled.span`${tw`text-lg`}`
+const Emoji = tw.span`text-lg`
 
 export default Posts

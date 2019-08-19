@@ -22,18 +22,16 @@ const Card = ({children, heroHeading, ...attrs}) => {
   )
 };
 
-const StyledCard = styled.div`${tw`shadow-md rounded`}`
-const Hero = styled.div`${tw`py-20 md:px-6 bg-blue rounded-tl rounded-tr relative`}`
-const Body = styled.div`${tw`p-12`}`
+const StyledCard = tw.div`shadow-md rounded`
+const Hero = tw.div`py-20 md:px-6 bg-blue rounded-tl rounded-tr relative`
+const Body = tw.div`p-12`
 const HeroHeading = styled(Heading)`${tw`text-white text-center sm:text-5xl`}`
-const HeroHeadingAccentContainer = styled.div`
-  ${tw`w-full h-full`}
+const HeroHeadingAccentContainer = tw.div`
+  w-full h-full
   position: absolute;
   top: 0;
   left: 0;
 `
-const HeroHeadingAccent = styled(Heading)`
-  ${tw`opacity-25 text-10xl my-0 text-white text-center h-full w-full flex items-center justify-center`}
-`
+const HeroHeadingAccent = styled(Heading)`${tw`opacity-25 text-10xl my-0 text-white text-center h-full w-full flex items-center justify-center`}`
 
 export default Card

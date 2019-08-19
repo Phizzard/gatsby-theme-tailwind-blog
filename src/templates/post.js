@@ -7,7 +7,7 @@ import {Layout} from '../components/Layout'
 import {Card} from '../components/Card'
 import {Tag} from '../components/Tag'
 
-/* globals tw */
+import tw from 'tailwind.macro'
 
 const Post = ({pageContext, data}) => {
   const {title} = pageContext;

@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
 import Heading from './Heading'
-/* globals tw */
+import tw from 'tailwind.macro'
 
-export const SubHeading = styled(Heading)`${tw`font-light text-grey-darker`}`
+export const SubHeading = styled(Heading)`font-light text-grey-darker`

@@ -15,6 +15,11 @@ let assetPath
 const PostTemplate = require.resolve(`./src/templates/post`)
 const PostsTemplate = require.resolve(`./src/templates/posts`)
 
+// Babel setup
+exports.onCreateBabelConfig = ({ actions: { setBabelPlugin } }) => {
+  setBabelPlugin({ name: 'babel-plugin-tailwind-components/macro' })
+}
+
 // Ensure that content directories exist at site-level
 exports.onPreBootstrap = ({ store }, themeOptions) => {
   const { program } = store.getState()

@@ -64,7 +64,6 @@ module.exports = options => {
           // Accepts all options defined by `babel-plugin-emotion` plugin.
         },
       },
-      'gatsby-plugin-tailwindcss',
       'gatsby-plugin-react-helmet',
     ].filter(Boolean),
   }

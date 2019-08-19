@@ -5,7 +5,7 @@ import {Avatar} from '../Avatar'
 import {Card} from '../Card'
 import {Heading} from '../Heading'
 import {Text} from '../Text'
-/* globals tw */
+import tw from 'tailwind.macro'
 
 const BioCard = ({heading, subHeading, content, ...attrs}) => {
   return(
