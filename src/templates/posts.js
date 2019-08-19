@@ -18,14 +18,14 @@ const Posts = ({pageContext}) => {
       <PostsHeading>Latest Posts</PostsHeading>
       {posts && posts.map(({node}) => (
         <PostCardLink to={node.slug} key={node.id} >
-        <PostCard >
-          <PostCardTitle as="h2">{node.title}</PostCardTitle>
-          {node.tags && node.tags.map(tag => <Tag>{tag}</Tag>)}
-          <Text>{node.excerpt}</Text>
-          <Text as="small">
-            {node.date} - {Array.from(String(node.timeToRead), minute => <Emoji key={minute} role="img" aria-label="coffee emoji">☕</Emoji>)} {node.timeToRead} min to read
-          </Text>
-        </PostCard>
+          <PostCard >
+            <PostCardTitle as="h2">{node.title}</PostCardTitle>
+            {node.tags && node.tags.map(tag => <Tag>{tag}</Tag>)}
+            <Text>{node.excerpt}</Text>
+            <Text as="small">
+              {node.date} - {Array.from(String(node.timeToRead), minute => <Emoji key={minute} role="img" aria-label="coffee emoji">☕</Emoji>)} {node.timeToRead} min to read
+            </Text>
+          </PostCard>
         </PostCardLink>
         
       ))}

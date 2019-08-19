@@ -3,11 +3,13 @@ import styled from '@emotion/styled'
 import "./layout.css";
 /* globals tw */
 
+import {Seo} from '../Seo'
 import {Header} from '../Header'
 
 export default ({ children, ...props }) => (
   <StyledLayout>
-    <Header {...props} />
+    <Header />
+    <Seo {...props} />
     {children}
   </StyledLayout>
 )

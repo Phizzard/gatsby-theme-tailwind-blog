@@ -5,13 +5,16 @@ module.exports = options => {
       title: `Blog Title Placeholder`,
       author: `Name Placeholder`,
       description: `Description placeholder`,
+      url: ``,
       social: [
         {
-          name: `Twitter`,
+          key: `twitter`,
+          username: `Twitter`,
           url: `https://twitter.com/gatsbyjs`,
         },
         {
-          name: `GitHub`,
+          key: `github`,
+          username: `GitHub`,
           url: `https://github.com/gatsbyjs`,
         },
       ],
