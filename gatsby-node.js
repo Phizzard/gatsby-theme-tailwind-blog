@@ -102,7 +102,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         siteMetadata {
           title
           social {
-            name
+            key
+            username
             url
           }
         }
