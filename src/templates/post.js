@@ -3,7 +3,6 @@ import {graphql} from 'gatsby'
 import styled from '@emotion/styled'
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import {BioCard} from '../components/BioCard'
-import {Layout} from '../components/Layout'
 import {Card} from '../components/Card'
 import {Tag} from '../components/Tag'
 
@@ -14,13 +13,13 @@ const Post = ({pageContext, data}) => {
   const {blogPost: {body, tags}} = data;
 
   return(
-    <Layout>
+    <div>
       <ContentCard heroHeading={title}>
         {tags && tags.map(tag => <Tag>{tag}</Tag>)}
         <MDXRenderer>{body}</MDXRenderer>
       </ContentCard>
       <BioCard heading="Full Name" subHeading="Shit Poster" content="Cause I'm in too deep and I'm trying to keep up above in my head, instead of going under" />
-    </Layout>
+    </div>
   )
 }
 

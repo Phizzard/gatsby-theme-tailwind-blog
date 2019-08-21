@@ -8,15 +8,15 @@ import {Heading, SubHeading} from '../Heading'
 
 const Avatar = ({heading, subHeading}) => {
   const avatarSrc = useStaticQuery(graphql`
-  query MyQuery {
-    file(name: {eq: "avatar"}) {
-      childImageSharp {
-        fluid(maxWidth: 200, maxHeight: 200) {
-          ...GatsbyImageSharpFluid
+    query AvatarImageQuery {
+      file(name: {eq: "avatar"}) {
+        childImageSharp {
+          fluid(maxWidth: 200, maxHeight: 200) {
+            ...GatsbyImageSharpFluid
+          }
         }
       }
     }
-  }
   `)
   return(
     <StyledAvatar>
