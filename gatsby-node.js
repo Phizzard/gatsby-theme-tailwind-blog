@@ -14,6 +14,7 @@ let assetPath
 // These templates are simply data-fetching wrappers that import components
 const PostTemplate = require.resolve(`./src/templates/post`)
 const PostsTemplate = require.resolve(`./src/templates/posts`)
+const TagTemplate = require.resolve(`./src/templates/tag`)
 
 // Ensure that content directories exist at site-level
 exports.onPreBootstrap = ({ store }, themeOptions) => {
@@ -123,6 +124,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             tags
           }
         }
+        distinct(field: tags)
       }
     }
   `)
@@ -137,6 +139,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     site: { siteMetadata },
   } = result.data
   const posts = mdxPages.edges
+  const tags = mdxPages.distinct
   const { title: siteTitle, social: socialLinks } = siteMetadata
 
   // Create a page for each Post
@@ -156,6 +159,17 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       },
     })
   })
+
+  tags.forEach(tag => {
+    createPage({
+      path: `${basePath}/${tag}`,
+      component: TagTemplate,
+      context: {
+        tag
+      }
+    })
+  })
+
 
   // Create the Posts page
   createPage({
