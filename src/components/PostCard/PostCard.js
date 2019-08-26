@@ -4,17 +4,17 @@ import {Link} from 'gatsby'
 import { Card } from "./../Card";
 import {Tag} from '../Tag'
 import { Heading } from "./../Heading";
-import { Text } from "../Text";
-
+import { Text, SmallText } from "../Text";
+import { Button } from '../Button'
 /* globals tw */
 
 const PostCard = ({ title, excerpt, timeToRead, date, tags, link, ...props }) => {
   return (
     <Card {...props} >
       <PostCardTitle as="h2"><PostCardLink to={link}>{title}</PostCardLink></PostCardTitle>
-      {tags && tags.map(tag => <Tag key={tag}>{tag}</Tag>)}
       <Text>{excerpt}</Text>
-      <Text as="small">
+      <PostCardButton as={Link} to={link}>View Post</PostCardButton>
+      <SmallText>
         {date} -{" "}
         {Array.from(String(timeToRead), minute => (
           <Emoji key={minute} role="img" aria-label="coffee emoji">
@@ -22,11 +22,13 @@ const PostCard = ({ title, excerpt, timeToRead, date, tags, link, ...props }) =>
           </Emoji>
         ))}{" "}
         {timeToRead} min to read
-      </Text>
+      </SmallText>
+      {tags && tags.map(tag => <Tag key={tag}>{tag}</Tag>)}
     </Card>
   );
 };
 
+const PostCardButton = styled(Button)`${tw`w-full`}`
 const PostCardTitle = styled(Heading)`
   ${tw`mt-0 mb-2`}
 `;
