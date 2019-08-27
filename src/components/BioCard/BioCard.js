@@ -1,11 +1,8 @@
 import React from 'react'
-import styled from '@emotion/styled'
 
 import {Avatar} from '../Avatar'
 import {Card} from '../Card'
-import {Heading} from '../Heading'
 import {Text} from '../Text'
-/* globals tw */
 
 const BioCard = ({heading, subHeading, content, ...attrs}) => {
   return(

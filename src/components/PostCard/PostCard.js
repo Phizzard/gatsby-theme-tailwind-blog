@@ -17,9 +17,7 @@ const PostCard = ({ title, excerpt, timeToRead, date, tags, link, featured, ...p
       <SmallText>
         {date} -{" "}
         {Array.from(String(timeToRead), minute => (
-          <Emoji key={minute} role="img" aria-label="coffee emoji">
-            ☕
-          </Emoji>
+          <Emoji key={minute}><span  role="img" aria-label="coffee emoji">☕</span></Emoji>
         ))}{" "}
         {timeToRead} min to read
       </SmallText>
