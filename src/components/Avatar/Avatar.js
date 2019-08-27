@@ -11,7 +11,7 @@ const Avatar = ({heading, subHeading}) => {
     query AvatarImageQuery {
       file(name: {eq: "avatar"}) {
         childImageSharp {
-          fluid(maxWidth: 200, maxHeight: 200) {
+          fluid(maxWidth: 400, maxHeight: 400) {
             ...GatsbyImageSharpFluid
           }
         }

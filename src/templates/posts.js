@@ -2,21 +2,16 @@ import React from "react";
 import styled from "@emotion/styled";
 import { Layout } from "../components/Layout";
 import { Heading } from "../components/Heading";
-import { BioCard } from "../components/BioCard";
 import { PostCard } from "../components/PostCard";
+import { Hero } from "../components/Hero"
 /* global tw */
 
 const Posts = ({ pageContext }) => {
   const { posts, basePath } = pageContext;
 
   return (
-    <Layout>
+    <Layout Header={Hero} title="Welcome to a Blog!" name="Phil Tietjen" subTitle="Shit Poster / Shit Lord" content="blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah ">
       <div>
-        <IntroBioCard
-          heading="Full Name"
-          subHeading="Shit Poster"
-          content="Cause I'm in too deep and I'm trying to keep up above in my head, instead of going under"
-        />
         <PostsHeading>Latest Posts</PostsHeading>
         {posts &&
           posts.map(({ node }, index) => (
@@ -35,9 +30,6 @@ const Posts = ({ pageContext }) => {
     </Layout>
   );
 };
-const IntroBioCard = styled(BioCard)`
-  ${tw`mt-4`}
-`;
 const StyledPostCard = styled(PostCard)`
   ${tw`mb-4`}
 `;
