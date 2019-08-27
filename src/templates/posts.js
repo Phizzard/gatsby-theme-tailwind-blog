@@ -7,7 +7,7 @@ import { PostCard } from "../components/PostCard";
 /* global tw */
 
 const Posts = ({ pageContext }) => {
-  const { posts } = pageContext;
+  const { posts, basePath } = pageContext;
 
   return (
     <Layout>
@@ -19,13 +19,14 @@ const Posts = ({ pageContext }) => {
         />
         <PostsHeading>Latest Posts</PostsHeading>
         {posts &&
-          posts.map(({ node }) => (
+          posts.map(({ node }, index) => (
             <StyledPostCard
               key={node.id}
+              featured={index === 0 ? true : false}
               title={node.title}
               tags={node.tags}
               date={node.date}
-              link={node.slug}
+              link={`${basePath}${node.slug}`}
               excerpt={node.excerpt}
               timeToRead={node.timeToRead}
             />

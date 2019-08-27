@@ -148,10 +148,11 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     const next = index === 0 ? null : posts[index - 1]
     const { slug } = post
     createPage({
-      path: slug,
+      path: `${basePath}${slug}`,
       component: PostTemplate,
       context: {
         ...post,
+        basePath,
         siteTitle,
         socialLinks,
         previous,
@@ -165,7 +166,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       path: `${basePath}/${tag}`,
       component: TagTemplate,
       context: {
-        tag
+        tag: tag,
+        basePath: basePath
       }
     })
   })
@@ -176,6 +178,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     path: basePath,
     component: PostsTemplate,
     context: {
+      basePath,
       posts,
       siteTitle,
       socialLinks,

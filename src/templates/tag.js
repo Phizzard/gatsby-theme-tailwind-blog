@@ -9,7 +9,7 @@ import { PostCard } from '../components/PostCard'
 
 const TagTemplate = ({ data, pageContext }) => {
   const { allBlogPost: {edges} } = data;
-  const {tag} = pageContext
+  const {tag, basePath} = pageContext
 
   return (
     <Layout>
@@ -27,7 +27,7 @@ const TagTemplate = ({ data, pageContext }) => {
               title={node.title}
               tags={node.tags}
               date={node.date}
-              link={node.slug}
+              link={`${basePath}${node.slug}`}
               excerpt={node.excerpt}
               timeToRead={node.timeToRead}
             />
