@@ -8,10 +8,10 @@ import { Text, SmallText } from "../Text";
 import { Button } from '../Button'
 /* globals tw */
 
-const PostCard = ({ title, excerpt, timeToRead, date, tags, link, ...props }) => {
+const PostCard = ({ title, excerpt, timeToRead, date, tags, link, featured, ...props }) => {
   return (
-    <Card {...props} >
-      <PostCardTitle as="h2"><PostCardLink to={link}>{title}</PostCardLink></PostCardTitle>
+    <Card heroHeading={featured && title} {...props} >
+      {!featured && <PostCardTitle as="h2"><PostCardLink to={link}>{title}</PostCardLink></PostCardTitle>}
       <Text>{excerpt}</Text>
       <PostCardButton as={Link} to={link}>View Post</PostCardButton>
       <SmallText>
