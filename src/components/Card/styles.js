@@ -2,7 +2,7 @@ import styled from '@emotion/styled'
 import { Heading } from '../Heading'
 /* global tw */
 
-export const StyledCard = styled.div`${tw`shadow-md rounded`}`
+export const StyledCard = styled.div`${tw`shadow-md rounded bg-white`}`
 export const Hero = styled.div`${tw`py-20 md:px-6 bg-blue rounded-tl rounded-tr relative`}`
 export const Body = styled.div`${tw`p-6 md:p-12`}`
 export const HeroHeading = styled(Heading)`${tw`text-white text-center sm:text-5xl`}`
