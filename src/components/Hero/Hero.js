@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import { Heading } from "gatsby-theme-tailwind-blog/src/components/Heading";
-import { BioCard } from "gatsby-theme-tailwind-blog/src/components/BioCard";
+import { Heading } from "../Heading";
+import { BioCard } from "../BioCard";
 /* globals tw */
 
 const Hero = ({title, name, subTitle, content}) => {

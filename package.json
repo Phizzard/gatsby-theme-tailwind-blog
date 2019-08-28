@@ -1,6 +1,6 @@
 {
-  "name": "gatsby-theme-tailwind-blog",
-  "version": "1.0.0",
+  "name": "@phizzard/gatsby-theme-tailwind-blog",
+  "version": "1.0.1",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
