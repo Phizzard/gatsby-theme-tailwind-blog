@@ -13,8 +13,8 @@ const Hero = ({title, name, subTitle, content}) => {
   )
 }
 
-const HeroContainer = styled.div`${tw`bg-blue h-screen flex flex-wrap justify-center items-center text-lg md:text-2xl`}`
-const HeroHeading = styled(Heading)`${tw`m-0 w-full text-white py-4 px-6 md:px-12 text-center`}`
-const HeroBioCard = styled(BioCard)`${tw`mx-12`}`
+const HeroContainer = styled.div`${tw`bg-blue h-screen flex flex-wrap justify-center content-center text-lg sm:text-2xl`}`
+const HeroHeading = styled(Heading)`${tw`m-0 w-full text-white pb-12 px-6 sm:px-12 text-center`}`
+const HeroBioCard = styled(BioCard)`${tw`mx-4 sm:mx-12`}`
 
 export default Hero
