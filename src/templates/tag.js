@@ -2,9 +2,8 @@ import React from "react";
 import styled from "@emotion/styled";
 import { graphql } from "gatsby";
 import { Layout } from "../components/Layout";
-import { Heading } from "../components/Heading";
-import { BioCard } from "../components/BioCard";
 import { PostCard } from '../components/PostCard'
+import { Hero } from '../components/Hero'
 /* global tw */
 
 const TagTemplate = ({ data, pageContext }) => {
@@ -12,15 +11,8 @@ const TagTemplate = ({ data, pageContext }) => {
   const {tag, basePath} = pageContext
 
   return (
-    <Layout>
-      <div>
-        <IntroBioCard
-          heading="Full Name"
-          subHeading="Shit Poster"
-          content="Cause I'm in too deep and I'm trying to keep up above in my head, instead of going under"
-        />
-        <PostsHeading>{tag}</PostsHeading>
-        {edges &&
+    <Layout Header={Hero} title={tag} subTitle="Shit Poster / Shit Lord" content="blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah ">
+      {edges &&
           edges.map(({ node }) => (
             <StyledPostCard
               key={node.id}
@@ -32,7 +24,6 @@ const TagTemplate = ({ data, pageContext }) => {
               timeToRead={node.timeToRead}
             />
           ))}
-      </div>
     </Layout>
   );
 };
@@ -56,12 +47,6 @@ export const query = graphql`
   }
 `
 
-const IntroBioCard = styled(BioCard)`
-  ${tw`mt-4`}
-`;
-const PostsHeading = styled(Heading)`
-  ${tw`text-center`}
-`;
 const StyledPostCard = styled(PostCard)`
   ${tw`mb-4`}
 `;
