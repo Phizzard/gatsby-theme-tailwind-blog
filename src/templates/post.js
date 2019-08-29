@@ -10,7 +10,7 @@ import { Layout } from "../components/Layout";
 /* globals tw */
 
 const Post = ({ pageContext, data }) => {
-  const { title } = pageContext;
+  const { title, basePath } = pageContext;
   const {
     blogPost: { body, tags }
   } = data;
@@ -19,7 +19,7 @@ const Post = ({ pageContext, data }) => {
     <Layout>
       <div>
         <ContentCard heroHeading={title}>
-          {tags && tags.map(tag => <Tag key={tag}>{tag}</Tag>)}
+          {tags && tags.map(tag => <Tag key={tag} link={`${basePath}${tag}`}>{tag}</Tag>)}
           <MDXRenderer>{body}</MDXRenderer>
         </ContentCard>
         <BioCard
