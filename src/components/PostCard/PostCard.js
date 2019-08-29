@@ -8,7 +8,7 @@ import { Text, SmallText } from "../Text";
 import { Button } from '../Button'
 /* globals tw */
 
-const PostCard = ({ title, excerpt, timeToRead, date, tags, link, featured, ...props }) => {
+const PostCard = ({ title, excerpt, timeToRead, date, tags, link, featured, basePath, ...props }) => {
   return (
     <Card heroHeading={featured && title} {...props} >
       {!featured && <PostCardTitle as="h2"><PostCardLink to={link}>{title}</PostCardLink></PostCardTitle>}
@@ -21,7 +21,7 @@ const PostCard = ({ title, excerpt, timeToRead, date, tags, link, featured, ...p
         ))}{" "}
         {timeToRead} min to read
       </SmallText>
-      {tags && tags.map(tag => <Tag key={tag}>{tag}</Tag>)}
+      {tags && tags.map(tag => <Tag key={tag} link={`${basePath}${tag}`}>{tag}</Tag>)}
     </Card>
   );
 };

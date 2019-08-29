@@ -2,10 +2,10 @@ import React from 'react'
 import {Link} from 'gatsby'
 import {StyledTag} from './styles'
 
-const Tag = ({children, ...attrs}) => {
+const Tag = ({children, link, ...attrs}) => {
 
   return(
-    <StyledTag as={Link} to={`/blog/${children}`}>
+    <StyledTag as={Link} to={link}>
       {children}
     </StyledTag>
   )

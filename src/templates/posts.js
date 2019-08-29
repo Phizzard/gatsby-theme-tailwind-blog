@@ -22,6 +22,7 @@ const Posts = ({ pageContext }) => {
               tags={node.tags}
               date={node.date}
               link={`${basePath}${node.slug}`}
+              basePath={basePath}
               excerpt={node.excerpt}
               timeToRead={node.timeToRead}
             />

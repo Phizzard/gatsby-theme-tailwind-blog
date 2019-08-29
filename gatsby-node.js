@@ -163,7 +163,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   tags.forEach(tag => {
     createPage({
-      path: `${basePath}/${tag}`,
+      path: `${basePath}${tag}`,
       component: TagTemplate,
       context: {
         tag: tag,
