@@ -9,6 +9,6 @@ const Button = ({children, ...attrs}) => {
   )
 }
 
-const StyledButton = styled.button`${tw`font-sans no-underline border-none rounded bg-blue text-white py-2 px-4`}`
+const StyledButton = styled.button`${tw`font-sans no-underline border-none rounded bg-blue-dark text-white py-2 px-4`}`
 
 export default Button
