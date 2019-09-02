@@ -4,6 +4,7 @@ import { graphql } from "gatsby";
 import { Layout } from "../components/Layout";
 import { PostCard } from '../components/PostCard'
 import { Hero } from '../components/Hero'
+import { Heading } from '../components/Heading'
 /* global tw */
 
 const TagTemplate = ({ data, pageContext }) => {
@@ -11,7 +12,8 @@ const TagTemplate = ({ data, pageContext }) => {
   const {tag, basePath} = pageContext
 
   return (
-    <Layout Header={Hero} title={tag} subTitle="Shit Poster / Shit Lord" content="blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah ">
+    <Layout Header={Hero} title={tag} subTitle="Author Title" content="Bacon ipsum dolor amet t-bone corned beef prosciutto spare ribs pancetta ham hock picanha short ribs.">
+    <PostsHeading>Latest Posts in {tag}</PostsHeading>
       {edges &&
           edges.map(({ node }) => (
             <StyledPostCard
@@ -50,5 +52,7 @@ export const query = graphql`
 const StyledPostCard = styled(PostCard)`
   ${tw`mb-4`}
 `;
-
+const PostsHeading = styled(Heading)`
+  ${tw`text-center`}
+`;
 export default TagTemplate;

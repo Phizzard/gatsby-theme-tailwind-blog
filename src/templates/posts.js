@@ -10,7 +10,7 @@ const Posts = ({ pageContext }) => {
   const { posts, basePath } = pageContext;
 
   return (
-    <Layout Header={Hero} title="Welcome to a Blog!" name="Phil Tietjen" subTitle="Shit Poster / Shit Lord" content="blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah ">
+    <Layout Header={Hero} title="Welcome to a Blog!" name="Author Name" subTitle="Author title" content="Bacon ipsum dolor amet t-bone corned beef prosciutto spare ribs pancetta ham hock picanha short ribs.">
       <div>
         <PostsHeading>Latest Posts</PostsHeading>
         {posts &&

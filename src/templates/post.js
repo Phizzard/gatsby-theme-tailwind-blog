@@ -23,9 +23,9 @@ const Post = ({ pageContext, data }) => {
           <MDXRenderer>{body}</MDXRenderer>
         </ContentCard>
         <BioCard
-          heading="Full Name"
-          subHeading="Shit Poster"
-          content="Cause I'm in too deep and I'm trying to keep up above in my head, instead of going under"
+          heading="Author Name"
+          subHeading="Author Title"
+          content="Bacon ipsum dolor amet t-bone corned beef prosciutto spare ribs pancetta ham hock picanha short ribs."
         />
       </div>
     </Layout>
