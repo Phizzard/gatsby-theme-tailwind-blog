@@ -16,6 +16,18 @@ const PostTemplate = require.resolve(`./src/templates/post`)
 const PostsTemplate = require.resolve(`./src/templates/posts`)
 const TagTemplate = require.resolve(`./src/templates/tag`)
 
+// fixes issues with tailwind.macro and tailwindV1+
+// https://github.com/bradlc/babel-plugin-tailwind-components/issues/39
+exports.onCreateWebpackConfig = ({
+  actions,
+}) => {
+  actions.setWebpackConfig({
+    node :{
+      fs: 'empty'
+    }
+  })
+}
+
 // Ensure that content directories exist at site-level
 exports.onPreBootstrap = ({ store }, themeOptions) => {
   const { program } = store.getState()
