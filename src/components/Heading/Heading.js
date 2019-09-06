@@ -1,6 +1,5 @@
 import React from 'react'
-import styled from '@emotion/styled'
-/* global tw */
+import tw from 'tailwind.macro'
 
 const Heading = ({children, ...attrs}) => {
   return(
@@ -8,6 +7,6 @@ const Heading = ({children, ...attrs}) => {
 )
 }
 
-const StyledHeading = styled.h1`${tw`font-sans`}`;
+const StyledHeading = tw.h1`font-sans`
 
 export default Heading;

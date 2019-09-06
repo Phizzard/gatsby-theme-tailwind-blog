@@ -1,6 +1,5 @@
 import React from 'react'
-import styled from '@emotion/styled';
-/* global tw */
+import tw from 'tailwind.macro'
 
 const Text = ({children, ...attrs}) => {
   return(
@@ -8,6 +7,6 @@ const Text = ({children, ...attrs}) => {
   )
 }
 
-const StyledText = styled.p`${tw`font-sans`}`
+const StyledText = tw.p`font-sans`
 
 export default Text

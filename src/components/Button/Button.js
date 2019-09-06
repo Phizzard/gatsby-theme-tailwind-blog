@@ -1,7 +1,6 @@
 import React from 'react'
-import styled from '@emotion/styled'
 
-/* globals tw */
+import tw from 'tailwind.macro'
 
 const Button = ({children, ...attrs}) => {
   return(
@@ -9,6 +8,6 @@ const Button = ({children, ...attrs}) => {
   )
 }
 
-const StyledButton = styled.button`${tw`font-sans no-underline border-none rounded bg-blue-dark text-white py-2 px-4`}`
+const StyledButton = tw.button`font-sans no-underline border-none rounded bg-blue-500 text-white py-2 px-4`
 
 export default Button

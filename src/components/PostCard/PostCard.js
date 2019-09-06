@@ -6,7 +6,7 @@ import {Tag} from '../Tag'
 import { Heading } from "./../Heading";
 import { Text, SmallText } from "../Text";
 import { Button } from '../Button'
-/* globals tw */
+import tw from 'tailwind.macro'
 
 const PostCard = ({ title, excerpt, timeToRead, date, tags, link, featured, basePath, ...props }) => {
   return (
@@ -33,8 +33,6 @@ const PostCardTitle = styled(Heading)`
 const PostCardLink = styled(Link)`
   ${tw`no-underline text-black`}
 `;
-const Emoji = styled.span`
-  ${tw`text-lg`}
-`;
+const Emoji = tw.span`text-lg`
 
 export default PostCard;

@@ -4,7 +4,7 @@ import { Layout } from "../components/Layout";
 import { Heading } from "../components/Heading";
 import { PostCard } from "../components/PostCard";
 import { Hero } from "../components/Hero"
-/* global tw */
+import tw from 'tailwind.macro'
 
 const Posts = ({ pageContext }) => {
   const { posts, basePath } = pageContext;

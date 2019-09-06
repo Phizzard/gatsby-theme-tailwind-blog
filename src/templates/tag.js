@@ -5,7 +5,7 @@ import { Layout } from "../components/Layout";
 import { PostCard } from '../components/PostCard'
 import { Hero } from '../components/Hero'
 import { Heading } from '../components/Heading'
-/* global tw */
+import tw from 'tailwind.macro'
 
 const TagTemplate = ({ data, pageContext }) => {
   const { allBlogPost: {edges} } = data;

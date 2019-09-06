@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from "gatsby";
 import Image from "gatsby-image";
 import { Heading } from "../Heading";
 import { BioCard } from "../BioCard";
-/* globals tw */
+import tw from 'tailwind.macro'
 
 const Hero = ({ title, name, subTitle, content }) => {
   const brandGraySrc = useStaticQuery(graphql`
@@ -27,9 +27,8 @@ const Hero = ({ title, name, subTitle, content }) => {
   );
 };
 
-const HeroContainer = styled.div`
-  ${tw`bg-blue-dark h-screen-90 flex flex-wrap justify-center content-center text-lg sm:text-2xl`}
-`;
+const HeroContainer = tw.div`bg-blue-500 h-screen-95 flex flex-wrap justify-center content-center text-lg sm:text-2xl`
+
 const HeroHeading = styled(Heading)`
   ${tw`m-0 w-full text-white pb-12 px-6 sm:px-12 text-center`}
   z-index: 1;

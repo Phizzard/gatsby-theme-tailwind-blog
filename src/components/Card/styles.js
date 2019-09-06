@@ -1,10 +1,10 @@
 import styled from '@emotion/styled'
 import { Heading } from '../Heading'
-/* global tw */
+import tw from 'tailwind.macro'
 
-export const StyledCard = styled.div`${tw`shadow-md rounded bg-white`}`
-export const Hero = styled.div`${tw`py-20 md:px-6 bg-blue-dark rounded-tl rounded-tr relative`}`
-export const Body = styled.div`${tw`p-6 md:p-12`}`
+export const StyledCard = tw.div`shadow-md rounded bg-white`
+export const Hero = tw.div`py-20 md:px-6 bg-blue-500 rounded-tl rounded-tr relative`
+export const Body = tw.div`p-6 md:p-12`
 export const HeroHeading = styled(Heading)`${tw`text-white text-center sm:text-5xl`}`
 export const HeroHeadingAccentContainer = styled.div`
   ${tw`w-full h-full`}
