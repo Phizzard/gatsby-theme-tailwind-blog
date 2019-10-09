@@ -33,8 +33,8 @@ module.exports = {
 
 3 - Init `tailwind.js` file
 ```sh
-npx tailwind@0.7.4 init
+npx tailwind@1.0.0-alpha.10 init
 ```
 ```sh
-yarn tailwind@0.7.4 init
+yarn tailwind@01.0.0-alpha.10 init
 ```
